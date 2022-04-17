@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assesment</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% if (foods.length === 0) { %>
+      <p>There are no groceries yet!</p>
+
+    <% } else { %>
+      <ul>
+        <%foods.forEach((f) => {%>
+        <li><%=f.food%></li>
+       <% }) %>
+      </ul>
+  <%  } %>
+  <form action="/" method="POST">
+    <input type="text" name="food">
+    <button type="submit">ADD Grocery</button>
+    </form>
+  </body>
+</html>

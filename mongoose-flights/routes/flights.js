@@ -1,0 +1,13 @@
+const express = require('express');
+const router = express.Router();
+const flightsCtrl = require('../controllers/flights');
+	
+// GET /movies/new
+router.get('/new', flightsCtrl.new);
+router.get('/', flightsCtrl.index);
+router.get('/:id', flightsCtrl.show);
+router.post('/', flightsCtrl.create);
+// router.delete('/:id', flightsCtrl.delete);
+
+	
+module.exports = router;
